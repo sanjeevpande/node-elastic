@@ -29,22 +29,27 @@ var GridComponent = React.createClass({
   		}
 
   		if(!data.length){
-			return <div>No data found !</div>
+			return <div className='msg'>No data found !</div>
 		}
 
 		if(!(data instanceof Array)){
-			return <div>{data}</div>
+			return <div className='msg'>{data}</div>
 		}
 
 		return (
 	      <div>
-				{data.map(function(result){
-					return <div className='grid-content'>
-							Name : <span>{result._source.name}, </span>
-							id : <span>{result._id}</span>
-						</div>
-				})}
-
+	      		<div className='grid-header'>
+	      			<span>Id</span>
+	      			<span>Name</span>
+	      		</div>
+	      		<div className='grid-body'>
+	      			{data.map(function(result){
+						return 	<ul className='grid-row'>
+									<li>{result._id}</li>
+									<li>{result._source.name}</li>
+								</ul>
+					})}
+	      		</div>
 			</div>
 	    );
   	}
@@ -72,7 +77,7 @@ var FetchComponent = React.createClass({
   	render: function() {
 	    return (
 	      <div>
-	      	<input ref="searchInput" type="text" placeholder="Enter field name to search" id="search" />
+	      	<input ref="searchInput" type="text" placeholder="Search query" id="search" />
 	      	<button onClick={this.fetchData}>Fetch</button>
 	      </div>
 	    );

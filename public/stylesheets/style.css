@@ -6,3 +6,81 @@ body {
 a {
   color: #00B7FF;
 }
+input[type="text"]{
+	width: 160px;
+    height: 16px;
+    margin-right: 6px;
+    padding: 2px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    border-bottom: 1px solid grey;
+    margin-bottom: 25px;
+}
+button{
+	height: 28px;
+    width: 95px;
+    font-size: 14px;
+    margin-left: 25px;
+    border: none;
+    background-color: #FBFBFB;
+    box-shadow: 0 0 1px;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 4px;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+.grid-content{
+	border: 1px solid grey;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+}
+.msg{
+	width: 30%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+#grid{
+	margin-top: 30px;
+}
+.grid-header{
+	border-bottom: 1px solid grey;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-shadow: 0 9px 20px -8px;
+    transition: background-color 1s;
+}
+.grid-header span, .grid-body li{
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	font-size: 16px;
+    font-weight: bold;
+}
+.grid-body li{
+	font-weight: normal;
+	transition: transform 0.5s;
+}
+.grid-row{
+	padding-left: 0;
+}
+button:hover{
+	background-color: #2F4F4F;
+    color: #FFFFFF;
+}
+.grid-header:hover{
+	background-color: #2F4F4F;
+    color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px green;
+}
+.grid-body li:hover{
+	transform: scale(1.4);
+}
